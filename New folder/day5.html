@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h2>Redeclaring a Variable Using var</h2>
+<p id="demo"></p>
+<p id="cars"></p>
+<p id="car"></p>
+<p id="car1"></p>
+<body>
+    <!-- <script>
+
+
+
+        // var x=15;
+
+        // {
+            
+        //     var x=10;
+        // }
+
+    // var x=2;
+    // var x=4;
+
+    x=10
+        document.write(x)
+        var x;
+
+    {let y;
+        y=11;
+
+        document.getElementById("demo").innerHTML = y;
+
+        
+             
+    }
+    
+    
+    {
+        const cars_name=["audi","honda","maruti","kia"];
+        document.getElementById("cars").innerHTML =  "Cars names: " + cars_name.join(",");
+        document.getElementById("cars").style.fontSize="45px";
+        document.getElementById("cars").style.fontWeight="bold";
+
+
+        const index =cars_name.indexOf("kia");
+        document.write()
+         document.getElementById("car1").innerHTML= "Car index : " + index ;
+         document.getElementById("car").innerHTML= "Car name : " + cars_name[index]    
+         
+         if (index ==3)
+         {
+            const cars_name=["audi","honda","maruti","kia"];
+            cars_name[index]="mandhera";
+
+            document.getElementById("cars").innerHTML =  "Cars names: " + cars_name.join(",");
+         }
+
+        }
+</script>
+
+
+<p id="methord"></p>
+
+</p>
+<script>
+    // Create an Array:
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.write(cars)
+    
+    // Change an element:
+    cars[0] = "Toyota";
+    
+    // Add an element:
+    cars.push("Audi");
+    
+    // Display the Array:
+    document.getElementById("methord").innerHTML = "new car names are : " + cars; 
+    </script>   
+    
+    
+    // constant object
+
+    <p id="object"></p>
+
+    <script>
+       // Create an object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// Change a property:
+car.color = "red";
+document.write(car)
+console.log("real object in car",car)
+
+// Add a property:
+car.owner = "Johnson";
+document.write(car)
+// Display the property:
+document.getElementById("object").innerHTML = "Car owner is " + car.owner;  
+    </script> -->
+
+
+
+// operater in JavaScript
+
+<script>
+
+    var x=100;
+      x &= 8;
+    document.getElementById("demo").innerHTML = x;
+
+</script>
+</body>
+</html>
+
+<!-- 
+Scope	Redeclare	Reassign	Hoisted	Binds this
+var	     No          Yes	    Yes	    Yes	   Yes
+let	     Yes	     No	        Yes	 No	   No
+const	 Yes	     No	        No	 No	    No      -->

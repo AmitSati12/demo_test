@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        li:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>  <!--  unorder list  -->
+
+    <script>
+        // Function to add a task
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskValue = taskInput.value.trim();// use from value alert means the vallue should be correct 
+
+            if (taskValue === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            const taskList = document.getElementById('taskList');
+
+            // Create a new list item
+            const li = document.createElement('li');
+            li.textContent = taskValue;
+
+            // Add an event listener to remove task on click
+            li.addEventListener('click', function () {
+                taskList.removeChild(li);
+            });
+
+            // Append the task to the list
+            taskList.appendChild(li);
+
+            // Clear the input field
+            taskInput.value = "";
+        }
+    </script>
+</body>
+</html>

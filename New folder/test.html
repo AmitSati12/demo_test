@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let userInput = prompt("Please enter your name:");
+        // console.log("User's name is:", userInput);
+    </script>
+<p id ="demo"></p>
+    <script>
+        function otcelsius(fahrenheit){
+
+            var temp =((fahrenheit-32)/1.8).toFixed(2);
+           output =  document.getElementById("demo").innerHTML="tempratre at newYock is : " + temp;
+            return output 
+
+        }
+otcelsius(78)
+        
+
+        // document.getElementById("demo").innerHTML="tempratre at neYock is : " + " "+ otcelsius(78);
+    </script>
+    <script>
+        function convert(fahrenheit){
+            
+            return ((fahrenheit-32)/1.8).toFixed(5)
+        }
+
+        let text = "the temprature is "+ convert(47) + " Celsius";
+        document.write(text)
+    </script>
+</body>
+</html>

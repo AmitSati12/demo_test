@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding JavaScript with Comments</title>
+    <style>
+        /* Adding styles for the cars paragraph */
+        #cars {
+            font-size: 45px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Understanding Variable Declarations</h2>
+    <!-- Paragraphs to display dynamic content -->
+    <p id="demo"></p>
+    <p id="cars"></p>
+    <p id="car"></p>
+    <p id="car1"></p>
+    
+    <script>
+        // ** Example of 'var' hoisting **
+        // Variables declared with 'var' are hoisted (moved to the top of their scope)
+        var x = 10; // Declaring and assigning the value 10 to x
+        document.write("Value of x: " + x + "<br>"); // Writing x's value to the document
+
+        // ** Example of 'let' (block-scoped variable) **
+        {
+            let y = 11; // Declaring 'y' inside a block
+            document.getElementById("demo").innerHTML = "Value of y: " + y; // Displaying y in the paragraph
+        }
+        
+        // ** Working with Arrays **
+        const cars_name = ["audi", "honda", "maruti", "kia"]; // Declaring a constant array of car names
+        // Displaying the car names in the paragraph with id 'cars'
+        document.getElementById("cars").innerHTML = "Car names: " + cars_name.join(", ");
+
+        // Styling the cars paragraph dynamically (alternative to CSS)
+        document.getElementById("cars").style.fontSize = "45px"; // Setting font size
+        document.getElementById("cars").style.fontWeight = "bold"; // Making the text bold
+
+        // ** Finding the Index of an Array Element **
+        const index = cars_name.indexOf("kia"); // Getting the index of 'kia' in the array
+        document.getElementById("car1").innerHTML = "Car index: " + index; // Displaying the index of 'kia'
+        document.getElementById("car").innerHTML = "Car name: " + cars_name[index]; // Displaying the car name at the index
+
+        // ** Replacing an Array Element **
+        // Check if 'kia' exists (index should not be -1, here it's 3)
+        if (index === 3) {
+            cars_name[index] = "mandhera"; // Replace 'kia' with 'mandhera' at index 3
+
+            // Update the paragraph with the new array of car names
+            document.getElementById("cars").innerHTML = "Car names: " + cars_name.join(", ");
+        }
+
+        // Note: const allows modification of the contents of an array,
+        // but the array variable itself cannot be reassigned.
+    </script>
+</body>
+</html>
